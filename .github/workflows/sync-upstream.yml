@@ -1,9 +1,9 @@
 name: Sync Upstream Releases
 
 on:
-  schedule:
-    # Every 6 hours, off the hour to dodge the scheduling backlog at :00
-    - cron: '20 */6 * * *'
+  # Schedule removed on this fork (ninepointlabs) — every-6h runs only fail
+  # (Actions cannot create PRs on forks) and spam failure emails. Keep
+  # workflow_dispatch for manual runs if needed.
   workflow_dispatch:
     inputs:
       packages:
